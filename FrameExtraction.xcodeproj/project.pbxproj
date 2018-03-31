@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		650CD5662070344500078BED /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 650CD5652070344500078BED /* OpenCVWrapper.mm */; };
+		650CD56E20703F0600078BED /* ios_conversions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 650CD56D20703F0600078BED /* ios_conversions.mm */; };
 		6590C850206FEF5B00F5006B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590C84F206FEF5B00F5006B /* AppDelegate.swift */; };
 		6590C852206FEF5B00F5006B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590C851206FEF5B00F5006B /* ViewController.swift */; };
 		6590C855206FEF5B00F5006B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6590C853206FEF5B00F5006B /* Main.storyboard */; };
@@ -22,6 +23,10 @@
 		650CD5632070344400078BED /* FrameExtraction-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrameExtraction-Bridging-Header.h"; sourceTree = "<group>"; };
 		650CD5642070344500078BED /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
 		650CD5652070344500078BED /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		650CD56820703DFD00078BED /* opencv2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = opencv2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		650CD56920703E0F00078BED /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		650CD56B20703E2700078BED /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		650CD56D20703F0600078BED /* ios_conversions.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ios_conversions.mm; sourceTree = "<group>"; };
 		6590C84C206FEF5B00F5006B /* FrameExtraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameExtraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6590C84F206FEF5B00F5006B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6590C851206FEF5B00F5006B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +56,9 @@
 		1B4F34AAC6154AD05751E323 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				650CD56B20703E2700078BED /* libstdc++.6.0.9.tbd */,
+				650CD56920703E0F00078BED /* AudioToolbox.framework */,
+				650CD56820703DFD00078BED /* opencv2.framework */,
 				C7E8DB3D3E00F16CC83C1F48 /* Pods_FrameExtraction.framework */,
 			);
 			name = Frameworks;
@@ -62,6 +70,7 @@
 				650CD5642070344500078BED /* OpenCVWrapper.h */,
 				650CD5652070344500078BED /* OpenCVWrapper.mm */,
 				650CD5632070344400078BED /* FrameExtraction-Bridging-Header.h */,
+				650CD56D20703F0600078BED /* ios_conversions.mm */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -242,6 +251,7 @@
 				65A7A32A207022100014D8E1 /* FPSCounter.swift in Sources */,
 				650CD5662070344500078BED /* OpenCVWrapper.mm in Sources */,
 				6590C862206FF0FB00F5006B /* FrameExtractor.swift in Sources */,
+				650CD56E20703F0600078BED /* ios_conversions.mm in Sources */,
 				6590C852206FEF5B00F5006B /* ViewController.swift in Sources */,
 				6590C850206FEF5B00F5006B /* AppDelegate.swift in Sources */,
 			);

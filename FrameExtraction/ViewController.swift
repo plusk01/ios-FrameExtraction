@@ -12,6 +12,8 @@ class ViewController: UIViewController, FrameExtractorDelegate {
     
     var frameExtractor: FrameExtractor!
     var fpsCounter = FPSCounter()
+    
+    let ocv = OpenCVWrapper()
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -22,8 +24,7 @@ class ViewController: UIViewController, FrameExtractorDelegate {
         frameExtractor.delegate = self
         fpsCounter.start()
         
-        let t = OpenCVWrapper()
-        print(t.openCVVersionString())
+        print(ocv.openCVVersionString())
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +33,7 @@ class ViewController: UIViewController, FrameExtractorDelegate {
     }
     
     func captured(image: UIImage) {
-        imageView.image = image
+        imageView.image = ocv.makeGray(image)
         
         // Show FPS counter
         fpsCounter.frameCompleted()

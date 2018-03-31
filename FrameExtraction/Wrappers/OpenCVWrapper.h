@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface OpenCVWrapper : NSObject
-    -(NSString *) openCVVersionString;
+- (NSString *) openCVVersionString;
+
+- (UIImage *) makeGray: (UIImage *) image;
 @end
