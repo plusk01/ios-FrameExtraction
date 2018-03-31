@@ -8,16 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, FrameExtractorDelegate {
+    
+    var frameExtractor: FrameExtractor!
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        frameExtractor = FrameExtractor()
+        frameExtractor.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func captured(image: UIImage) {
+        imageView.image = image
     }
 
 
