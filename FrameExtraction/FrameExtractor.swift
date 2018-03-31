@@ -15,7 +15,7 @@ protocol FrameExtractorDelegate: class {
 
 class FrameExtractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     private let position = AVCaptureDevice.Position.back
-    private let quality = AVCaptureSession.Preset.medium
+    private let quality = AVCaptureSession.Preset.iFrame1280x720
     
     private var permissionGranted = false
     private let captureSession = AVCaptureSession()
@@ -101,7 +101,6 @@ class FrameExtractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     // MARK: AVCaptureVideoDataOutputSampleBufferDelegate
     internal func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        print("Got frame!")
         guard let uiImage = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else { return }
         DispatchQueue.main.async { [unowned self] in
             self.delegate?.captured(image: uiImage)

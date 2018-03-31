@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, FrameExtractorDelegate {
     
     var frameExtractor: FrameExtractor!
+    var fpsCounter = FPSCounter()
 
     @IBOutlet weak var imageView: UIImageView!
     
@@ -19,6 +20,7 @@ class ViewController: UIViewController, FrameExtractorDelegate {
         super.viewDidLoad()
         frameExtractor = FrameExtractor()
         frameExtractor.delegate = self
+        fpsCounter.start()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +30,11 @@ class ViewController: UIViewController, FrameExtractorDelegate {
     
     func captured(image: UIImage) {
         imageView.image = image
+        
+        // Show FPS counter
+        fpsCounter.frameCompleted()
+        print(fpsCounter.fps)
+//        self.timeLabel.text = String(format: "%.1f FPS (latency: %.5f sec)", self.fpsCounter.fps, result.latency)
     }
 
 

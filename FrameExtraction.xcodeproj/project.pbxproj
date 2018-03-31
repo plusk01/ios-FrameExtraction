@@ -13,6 +13,7 @@
 		6590C857206FEF5B00F5006B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6590C856206FEF5B00F5006B /* Assets.xcassets */; };
 		6590C85A206FEF5B00F5006B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6590C858206FEF5B00F5006B /* LaunchScreen.storyboard */; };
 		6590C862206FF0FB00F5006B /* FrameExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590C861206FF0FB00F5006B /* FrameExtractor.swift */; };
+		65A7A32A207022100014D8E1 /* FPSCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A7A329207022100014D8E1 /* FPSCounter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6590C859206FEF5B00F5006B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6590C85B206FEF5B00F5006B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6590C861206FF0FB00F5006B /* FrameExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameExtractor.swift; sourceTree = "<group>"; };
+		65A7A329207022100014D8E1 /* FPSCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6590C858206FEF5B00F5006B /* LaunchScreen.storyboard */,
 				6590C85B206FEF5B00F5006B /* Info.plist */,
 				6590C861206FF0FB00F5006B /* FrameExtractor.swift */,
+				65A7A329207022100014D8E1 /* FPSCounter.swift */,
 			);
 			path = FrameExtraction;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65A7A32A207022100014D8E1 /* FPSCounter.swift in Sources */,
 				6590C862206FF0FB00F5006B /* FrameExtractor.swift in Sources */,
 				6590C852206FEF5B00F5006B /* ViewController.swift in Sources */,
 				6590C850206FEF5B00F5006B /* AppDelegate.swift in Sources */,
