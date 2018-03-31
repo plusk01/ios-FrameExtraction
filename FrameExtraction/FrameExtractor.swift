@@ -71,6 +71,12 @@ class FrameExtractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
         videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sample buffer"))
         guard captureSession.canAddOutput(videoOutput) else { return }
         captureSession.addOutput(videoOutput)
+        
+        guard let connection = videoOutput.connection(with: .video) else { return }
+        guard connection.isVideoOrientationSupported else { return }
+        connection.videoOrientation = .portrait
+        guard connection.isVideoMirroringSupported else { return }
+        connection.isVideoMirrored = position == .front
     }
     
     // MARK: Sample buffer to UIImage conversion
@@ -94,7 +100,7 @@ class FrameExtractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     }
     
     // MARK: AVCaptureVideoDataOutputSampleBufferDelegate
-    internal func captureOutput(_ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+    internal func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         print("Got frame!")
         guard let uiImage = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else { return }
         DispatchQueue.main.async { [unowned self] in
