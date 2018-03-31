@@ -21,6 +21,9 @@ class ViewController: UIViewController, FrameExtractorDelegate {
         frameExtractor = FrameExtractor()
         frameExtractor.delegate = self
         fpsCounter.start()
+        
+        let t = OpenCVWrapper()
+        print(t.openCVVersionString())
     }
 
     override func didReceiveMemoryWarning() {

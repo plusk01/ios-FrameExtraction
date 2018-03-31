@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650CD5662070344500078BED /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 650CD5652070344500078BED /* OpenCVWrapper.mm */; };
 		6590C850206FEF5B00F5006B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590C84F206FEF5B00F5006B /* AppDelegate.swift */; };
 		6590C852206FEF5B00F5006B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590C851206FEF5B00F5006B /* ViewController.swift */; };
 		6590C855206FEF5B00F5006B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6590C853206FEF5B00F5006B /* Main.storyboard */; };
@@ -14,9 +15,13 @@
 		6590C85A206FEF5B00F5006B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6590C858206FEF5B00F5006B /* LaunchScreen.storyboard */; };
 		6590C862206FF0FB00F5006B /* FrameExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590C861206FF0FB00F5006B /* FrameExtractor.swift */; };
 		65A7A32A207022100014D8E1 /* FPSCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A7A329207022100014D8E1 /* FPSCounter.swift */; };
+		C86455FCD8192EC1B094A10F /* Pods_FrameExtraction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E8DB3D3E00F16CC83C1F48 /* Pods_FrameExtraction.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650CD5632070344400078BED /* FrameExtraction-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FrameExtraction-Bridging-Header.h"; sourceTree = "<group>"; };
+		650CD5642070344500078BED /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		650CD5652070344500078BED /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		6590C84C206FEF5B00F5006B /* FrameExtraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameExtraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6590C84F206FEF5B00F5006B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6590C851206FEF5B00F5006B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		6590C85B206FEF5B00F5006B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6590C861206FF0FB00F5006B /* FrameExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameExtractor.swift; sourceTree = "<group>"; };
 		65A7A329207022100014D8E1 /* FPSCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSCounter.swift; sourceTree = "<group>"; };
+		79A16F5903AC4E03C5AF3E3D /* Pods-FrameExtraction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameExtraction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FrameExtraction/Pods-FrameExtraction.debug.xcconfig"; sourceTree = "<group>"; };
+		C1AC106BE80CEC0DDD5ADC1B /* Pods-FrameExtraction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameExtraction.release.xcconfig"; path = "Pods/Target Support Files/Pods-FrameExtraction/Pods-FrameExtraction.release.xcconfig"; sourceTree = "<group>"; };
+		C7E8DB3D3E00F16CC83C1F48 /* Pods_FrameExtraction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrameExtraction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C86455FCD8192EC1B094A10F /* Pods_FrameExtraction.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B4F34AAC6154AD05751E323 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7E8DB3D3E00F16CC83C1F48 /* Pods_FrameExtraction.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		650CD5622070341C00078BED /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				650CD5642070344500078BED /* OpenCVWrapper.h */,
+				650CD5652070344500078BED /* OpenCVWrapper.mm */,
+				650CD5632070344400078BED /* FrameExtraction-Bridging-Header.h */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
 		6590C843206FEF5B00F5006B = {
 			isa = PBXGroup;
 			children = (
 				6590C84E206FEF5B00F5006B /* FrameExtraction */,
 				6590C84D206FEF5B00F5006B /* Products */,
+				BD76438A90A1ECE35A46C24A /* Pods */,
+				1B4F34AAC6154AD05751E323 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +87,7 @@
 		6590C84E206FEF5B00F5006B /* FrameExtraction */ = {
 			isa = PBXGroup;
 			children = (
+				650CD5622070341C00078BED /* Wrappers */,
 				6590C84F206FEF5B00F5006B /* AppDelegate.swift */,
 				6590C851206FEF5B00F5006B /* ViewController.swift */,
 				6590C853206FEF5B00F5006B /* Main.storyboard */,
@@ -70,6 +100,15 @@
 			path = FrameExtraction;
 			sourceTree = "<group>";
 		};
+		BD76438A90A1ECE35A46C24A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79A16F5903AC4E03C5AF3E3D /* Pods-FrameExtraction.debug.xcconfig */,
+				C1AC106BE80CEC0DDD5ADC1B /* Pods-FrameExtraction.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6590C85E206FEF5B00F5006B /* Build configuration list for PBXNativeTarget "FrameExtraction" */;
 			buildPhases = (
+				EF97D35057FEBFC02090E455 /* [CP] Check Pods Manifest.lock */,
 				6590C848206FEF5B00F5006B /* Sources */,
 				6590C849206FEF5B00F5006B /* Frameworks */,
 				6590C84A206FEF5B00F5006B /* Resources */,
+				6CE1E3F04D32A8455D8FE935 /* [CP] Embed Pods Frameworks */,
+				82A78B49C11830404CA7DB1A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -102,6 +144,7 @@
 				TargetAttributes = {
 					6590C84B206FEF5B00F5006B = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -137,12 +180,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CE1E3F04D32A8455D8FE935 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FrameExtraction/Pods-FrameExtraction-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OpenCV/opencv2.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/opencv2.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FrameExtraction/Pods-FrameExtraction-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82A78B49C11830404CA7DB1A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FrameExtraction/Pods-FrameExtraction-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF97D35057FEBFC02090E455 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FrameExtraction-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6590C848206FEF5B00F5006B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				65A7A32A207022100014D8E1 /* FPSCounter.swift in Sources */,
+				650CD5662070344500078BED /* OpenCVWrapper.mm in Sources */,
 				6590C862206FF0FB00F5006B /* FrameExtractor.swift in Sources */,
 				6590C852206FEF5B00F5006B /* ViewController.swift in Sources */,
 				6590C850206FEF5B00F5006B /* AppDelegate.swift in Sources */,
@@ -280,14 +378,19 @@
 		};
 		6590C85F206FEF5B00F5006B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79A16F5903AC4E03C5AF3E3D /* Pods-FrameExtraction.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P84SM4WGSD;
 				INFOPLIST_FILE = FrameExtraction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanderlusk.FrameExtraction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FrameExtraction/Wrappers/FrameExtraction-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,14 +398,18 @@
 		};
 		6590C860206FEF5B00F5006B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1AC106BE80CEC0DDD5ADC1B /* Pods-FrameExtraction.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P84SM4WGSD;
 				INFOPLIST_FILE = FrameExtraction/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanderlusk.FrameExtraction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FrameExtraction/Wrappers/FrameExtraction-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

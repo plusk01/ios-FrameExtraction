@@ -5,3 +5,8 @@ This app is based on a [tutorial](https://medium.com/ios-os-x-development/ios-ca
 
 The tutorial was written for Swift 3, but this repo is using Swift 4.0
 
+## CocoaPods ##
+
+This project uses CocoaPods to pull in the dependency to OpenCV. A good resource for using cocoapods for opencv, and connecting the C++ library through Objective-C++ into Swift can be found [here](https://blog.kickview.com/opencv-setup-on-ios/).
+
+For a tutorial that does this *without* using CocoaPods, see [here](https://medium.com/@borisohayon/ios-opencv-and-swift-1ee3e3a5735b)
